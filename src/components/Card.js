@@ -1,18 +1,53 @@
-import React from 'react';
+import React from 'react'
 
 const Card = (props) => {
   return (
     <div className={props.isMain ? 'card card-main' : 'card'}>
-      {props.header}
+      <div className={props.isMain ? 'card-header-main' : 'card-header'}>
+        {props.header}
+      </div>
       <div className='card-price'>
-        <span className="card-price-dollar">$</span>{props.isMonthly ? props.price.monthly : props.price.annually}
+        <span className='card-price-dollar'>$</span>
+        {props.isMonthly ? props.price.monthly : props.price.annually}
       </div>
-      <div className="card-info-container">
-        <div className={props.isMain ? 'card-info-main' : 'card-info'}>{props.row1}</div>
-        <div className="card-info-middle">{props.row2}</div>
-        <div className={props.isMain ? 'card-info-main' : 'card-info'}>{props.row3}</div>
+
+      <div className='card-info-container'>
+        <div>
+          <hr
+            className={
+              props.isMain ? 'card-info-seperator-main' : 'card-info-seperator'
+            }
+          />
+          <div className='card-info'>{props.row1}</div>
+          <hr
+            className={
+              props.isMain ? 'card-info-seperator-main' : 'card-info-seperator'
+            }
+          />
+        </div>
+        <div>
+          <div className='card-info'>{props.row2}</div>
+        </div>
+        <div>
+          <hr
+            className={
+              props.isMain ? 'card-info-seperator-main' : 'card-info-seperator'
+            }
+          />
+          <div className='card-info'>{props.row3}</div>
+          <hr
+            className={
+              props.isMain ? 'card-info-seperator-main' : 'card-info-seperator'
+            }
+          />
+        </div>
       </div>
-    </div>);  
+
+      <button className={props.isMain ? 'btn btn-main' : 'btn'}>
+        LEARN MORE
+      </button>
+    </div>
+  )
 }
 
-export default Card;
+export default Card
