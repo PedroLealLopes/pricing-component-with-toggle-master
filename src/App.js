@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Background from './components/Background'
 import PricingHeader from './components/PricingHeader'
-import Test from './components/test'
 import Card from './components/Card'
 
 export default class App extends Component {
@@ -59,8 +58,6 @@ export default class App extends Component {
       
       <PricingHeader monthly={this.state.isMonthly} handler={this.handler} />
       {this.state.count}
-
-      <Test />
 
       <div className="content">
         <Card {...basic} isMonthly={this.state.isMonthly} />

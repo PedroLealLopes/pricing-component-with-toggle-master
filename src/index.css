@@ -89,7 +89,7 @@ button:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 5%;
   text-align: center;
   position: relative;
 }
@@ -99,12 +99,11 @@ button:focus {
   color: var(--gray-blue-400);
   background-color: var(--gray-blue-100);
   border-radius: 0.5rem;
-  min-width: 280px;
+  width: 280px;
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
-  /* max-height: 400px; */
-  max-height: 400px;
+  height: 400px;
   margin-top: 25px;
   margin-bottom: 2rem;
 }
@@ -112,7 +111,7 @@ button:focus {
 .card-main {
   background: var(--main-bg-color-card);
   color: var(--gray-blue-100);
-  min-height: 450px;
+  height: 450px;
   margin-top: 0;
 }
 
@@ -125,7 +124,8 @@ button:focus {
 }
 
 .card-price {
-  position: relative;
+  display: flex;
+  justify-content: center;
   font-size: 48px;
   margin-top: 20px;
   font-weight: bolder;
@@ -133,11 +133,8 @@ button:focus {
 
 .card-price-dollar {
   font-size: 26px;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 80%;
+  align-self: center;
+  margin-right: 0.5rem;
 }
 
 .card-info-container {
@@ -181,4 +178,36 @@ button:focus {
   background: rgba(0, 0, 0, 0);
   color: hsl(237, 63%, 64%);
   border: 2px solid hsl(237, 63%, 64%);
+}
+
+.btn-main:active {
+  background: rgba(0, 0, 0, 0);
+  color: var(--gray-blue-100);
+  border: 2px solid var(--gray-blue-100);
+}
+
+@media only screen and (max-width: 1085px) {
+  .content {
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .card {
+    margin-bottom: 2rem;
+    margin-top: 0;
+    width: 280px;
+  }
+
+  .card-main {
+    height: 400px;
+  }
+
+  .card-header-main {
+    margin-top: 25px;
+  }
+
+  .btn {
+    height: 50px;
+  }
 }
