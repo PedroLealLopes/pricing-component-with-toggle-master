@@ -7,7 +7,7 @@ const PricingHeader = ({handler, monthly}) => {
       <span className="pricing-header-content">
         Annually 
         <span className='pricing-header-btn-bg'>
-          <button onClick = {handler} className={monthly ? 'pricing-header-btn' : 'pricing-header-btn pricing-header-btn-active'}></button>
+          <button aria-label="Annually or Monthly toggleable button" onClick = {props.handler} className={props.monthly ? 'pricing-header-btn' : 'pricing-header-btn pricing-header-btn-active'}></button>
         </span>
         Monthly
       </span>
