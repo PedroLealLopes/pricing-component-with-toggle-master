@@ -4,10 +4,15 @@
   --main-bg-color: linear-gradient(90deg,
       hsl(236, 72%, 79%) 50%,
       hsl(237, 63%, 64%) 100%);
+  --main-bg-color-card: linear-gradient(90deg,
+      hsl(236, 72%, 79%) -25%,
+      hsl(237, 63%, 64%) 100%);
   --gray-blue-100: hsl(240, 78%, 98%);
-  --gray-blue-200: rgb(19, 19, 29);
+  --gray-blue-200: hsl(234, 14%, 74%);
   --gray-blue-300: hsl(233, 13%, 49%);
   --gray-blue-400: hsl(232, 13%, 33%);
+  --gray-blue-hr: hsla(234, 14%, 74%, 50%);
+  --gray-blue-hr-main: hsla(240, 78%, 98%, 50%);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   background-color: var(--gray-blue-100);
@@ -30,14 +35,14 @@
 .pricing-header-container {
   display: grid;
   place-items: center;
-  margin-top: 4%;
+  margin-top: 2%;
 }
 
 .pricing-header-title {
   font-size: 38px;
   font-weight: 900;
   color: var(--gray-blue-400);
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 
 .pricing-header-content {
@@ -48,7 +53,7 @@
   display: inline-grid;
   grid-template-rows: 10% 10%;
   height: 31px;
-  width: 50px;
+  width: 60px;
   margin-left: 1.25rem;
   margin-right: 1.25rem;
   border-radius: 10rem;
@@ -67,10 +72,137 @@
   margin-top: 3px;
 }
 
-.pricing-header-btn:active {
-  margin-right: 20px;
+.pricing-header-btn-active {
+  margin-right: 26px;
 }
 
 button:focus {
   outline: 0;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5%;
+  text-align: center;
+  position: relative;
+}
+
+.card {
+  padding: 25px 30px;
+  color: var(--gray-blue-400);
+  background-color: var(--gray-blue-100);
+  border-radius: 0.5rem;
+  width: 280px;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  margin-top: 25px;
+  margin-bottom: 2rem;
+}
+
+.card-main {
+  background: var(--main-bg-color-card);
+  color: var(--gray-blue-100);
+  height: 450px;
+  margin-top: 0;
+}
+
+.card-header {
+  margin-top: 25px;
+}
+
+.card-header-main {
+  margin-top: 50px;
+}
+
+.card-price {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  margin-top: 20px;
+  font-weight: bolder;
+}
+
+.card-price-dollar {
+  font-size: 26px;
+  align-self: center;
+  margin-right: 0.5rem;
+}
+
+.card-info-container {
+  margin-top: 1.5rem;
+}
+
+.card-info-seperator {
+  border-color: var(--gray-blue-hr);
+  border-top: 0.5px;
+}
+
+.card-info-seperator-main {
+  border-color: var(--gray-blue-hr-main);
+  border-top: 0.5px;
+}
+
+.card-info {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 25px;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  background: var(--main-bg-color);
+  color: white;
+  cursor: pointer;
+}
+
+.btn-main {
+  background: var(--gray-blue-100);
+  color: hsl(237, 63%, 64%);
+  letter-spacing: 1.5px;
+}
+
+.btn:active {
+  background: rgba(0, 0, 0, 0);
+  color: hsl(237, 63%, 64%);
+  border: 2px solid hsl(237, 63%, 64%);
+}
+
+.btn-main:active {
+  background: rgba(0, 0, 0, 0);
+  color: var(--gray-blue-100);
+  border: 2px solid var(--gray-blue-100);
+}
+
+@media only screen and (max-width: 1085px) {
+  .content {
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .card {
+    margin-bottom: 2rem;
+    margin-top: 0;
+    width: 280px;
+  }
+
+  .card-main {
+    height: 400px;
+  }
+
+  .card-header-main {
+    margin-top: 25px;
+  }
+
+  .btn {
+    height: 50px;
+  }
 }
