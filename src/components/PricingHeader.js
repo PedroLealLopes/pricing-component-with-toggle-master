@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PricingHeader = (props) => {
+const PricingHeader = ({handler, monthly}) => {
   return (
     <div className="pricing-header-container">
       <div className="pricing-header-title">Our Pricing</div>
