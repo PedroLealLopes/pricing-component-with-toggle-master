@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
-  --main-bg-color: linear-gradient(
-    90deg,
-    hsl(236, 72%, 79%) 50%,
-    hsl(237, 63%, 64%) 100%
-  );
-  --main-bg-color-card: linear-gradient(
-    90deg,
-    hsl(236, 72%, 79%) -25%,
-    hsl(237, 63%, 64%) 100%
-  );
+  --main-bg-color: linear-gradient(90deg,
+      hsl(236, 72%, 79%) 50%,
+      hsl(237, 63%, 64%) 100%);
+  --main-bg-color-card: linear-gradient(90deg,
+      hsl(236, 72%, 79%) -25%,
+      hsl(237, 63%, 64%) 100%);
   --gray-blue-100: hsl(240, 78%, 98%);
   --gray-blue-200: hsl(234, 14%, 74%);
   --gray-blue-300: hsl(233, 13%, 49%);
@@ -80,7 +76,6 @@
   margin-right: 26px;
 }
 
-/* REMOVE FOR SUBMITION */
 button:focus {
   outline: 0;
 }

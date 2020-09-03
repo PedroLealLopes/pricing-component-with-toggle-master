@@ -53,7 +53,7 @@ export default class App extends Component {
     }
 
     return (
-      <div style={{ margin: '0 1rem' }}>
+      <div>
       <Background />
       
       <PricingHeader monthly={this.state.isMonthly} handler={this.handler} />
